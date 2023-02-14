@@ -7,7 +7,7 @@
     <artifactId>java-opentelemetry-test-tracer</artifactId>
     <version>1.0-SNAPSHOT</version>
     
-    <url>https://dmytro.ch</url>
+    <url>https://dmytro.ch/libs/java-opentelemetry-test-tracer</url>
     <name>ch.dmytro:java-opentelemetry-test-tracer</name>
     <description>A utility library for use in other programs</description>
     
@@ -33,14 +33,29 @@
     
     <developers>
         <developer>
-            <name>NanoDano</name>
-            <email>nanodano@devdungeon.com</email>
-            <organization>DevDungeon.com</organization>
-            <organizationUrl>https://www.devdungeon.com</organizationUrl>
+            <name>Dmytro Chaban</name>
+            <email>dmi3coder@gmail.com</email>
+            <organization>dmytro.ch</organization>
+            <organizationUrl>https://dmytro.ch</organizationUrl>
         </developer>
     </developers>
-    
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.opentelemetry</groupId>
+                <artifactId>opentelemetry-bom</artifactId>
+                <version>1.23.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <dependencies>
+        <dependency>
+            <groupId>io.opentelemetry</groupId>
+            <artifactId>opentelemetry-api</artifactId>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
